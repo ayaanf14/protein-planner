@@ -1,0 +1,29 @@
+
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #203529;
+  background: #f7faf8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: #16846a;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid #65baa3;
+  outline-offset: 2px;
+}
