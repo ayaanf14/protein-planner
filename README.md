@@ -1,75 +1,99 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Protein Planner
 
-Currently, two official plugins are available:
+A responsive nutrition-tracking and meal-planning web application built with React and TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Demo:** https://protein-planner-alpha.vercel.app
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Track daily calories, protein, carbohydrates, and fats
+- Set personalized daily nutrition goals
+- Browse and filter high-protein recipes
+- Create, edit, and delete custom meals
+- Adjust serving sizes and automatically recalculate nutrition
+- Add, edit, and remove food log entries
+- Plan meals for different days of the week
+- Visualize weekly calorie and protein intake
+- View personalized meal suggestions
+- Save meals, goals, and food logs using browser localStorage
+- Responsive interface for desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- CSS
+- Recharts
+- Browser localStorage
+- Git and GitHub
+- Vercel
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Install Node.js and npm.
 
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ayaanf14/protein-planner.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Navigate into the project:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd protein-planner
 ```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal.
+
+## Production Build
+
+```bash
+npm run build
+```
+
+## How It Works
+
+Protein Planner uses React state to manage nutrition goals, recipes, food logs, and planned meals.
+
+TypeScript defines the application's data structures, while JavaScript array operations calculate nutrition totals, filter recipes, and generate meal suggestions.
+
+Recharts visualizes historical nutrition data. Browser localStorage saves user information across page refreshes without requiring an account or backend.
+
+## Limitations
+
+- Nutrition values are estimates and may vary by ingredient and portion size.
+- Data is stored locally in each browser and does not synchronize across devices.
+- No user authentication or cloud database is currently implemented.
+
+## Future Improvements
+
+- Cloud synchronization and user accounts
+- Expanded recipe database
+- Grocery list generation
+- Improved meal recommendation algorithms
+- More advanced nutrition analytics
+
+## Deployment
+
+The application is deployed using Vercel.
+
+https://protein-planner-alpha.vercel.app
